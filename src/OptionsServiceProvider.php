@@ -18,6 +18,10 @@ class OptionsServiceProvider extends ServiceProvider
                 __DIR__.'/../database/migrations' => database_path('migrations'),
             ], 'migrations');
 
+            $this->publishes([
+                __DIR__.'/../config' => database_path('config'),
+            ], 'config');
+
             $this->commands([
                 \Appstract\Options\Console\OptionSetCommand::class,
             ]);

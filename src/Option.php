@@ -3,9 +3,12 @@
 namespace Appstract\Options;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Option extends Model
 {
+    const CACHE_KEY = 'app_options';
+
     /**
      * Indicates if the model should be timestamped.
      *
@@ -52,11 +55,18 @@ class Option extends Model
      */
     public function get($key, $default = null)
     {
+        // Lấy từ cache
+        $options = Cache::remember(self::CACHE_KEY, 3600, function () {
+            return self::all()->pluck('value', 'key')->toArray();
+        });
+
+        if (isset($options[$key])) return $options[$key];
+
         if ($option = self::where('key', $key)->first()) {
             return $option->value;
         }
 
-        return $default;
+        return $default ?? config('options.' . $key . '.value');
     }
 
     /**
@@ -74,6 +84,7 @@ class Option extends Model
             self::updateOrCreate(['key' => $key], ['value' => $value]);
         }
 
+        Cache::forget(self::CACHE_KEY);
         // @todo: return the option
     }
 
@@ -85,6 +96,10 @@ class Option extends Model
      */
     public function remove($key)
     {
-        return (bool) self::where('key', $key)->delete();
+        $success = self::where('key', $key)->delete();
+
+        if ($success) Cache::forget(self::CACHE_KEY);
+
+        return (bool) $success;
     }
 }

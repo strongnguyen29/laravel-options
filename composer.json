@@ -1,11 +1,11 @@
 {
-    "name": "appstract/laravel-options",
+    "name": "strongnguyen/laravel-options",
     "description": "Global options loaded from the database",
     "keywords": [
         "appstract",
         "laravel-options"
     ],
-    "homepage": "https://github.com/appstract/laravel-options",
+    "homepage": "https://github.com/strongnguyen29/laravel-options",
     "license": "MIT",
     "authors": [
         {
