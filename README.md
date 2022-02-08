@@ -17,7 +17,7 @@ composer require appstract/laravel-options
 
 ### Publish, migrate
 
-By running `php artisan vendor:publish --provider="Appstract\Options\OptionsServiceProvider"` in your project all files for this package will be published. For this package, it's only a migration. Run `php artisan migrate` to migrate the table. There will now be an `options` table in your database.
+By running `php artisan vendor:publish --provider="StrongNguyen\Options\OptionsServiceProvider"` in your project all files for this package will be published. For this package, it's only a migration. Run `php artisan migrate` to migrate the table. There will now be an `options` table in your database.
 
 ## Usage
 
@@ -66,9 +66,9 @@ $ composer test
 
 Contributions are welcome, [thanks to y'all](https://github.com/appstract/laravel-options/graphs/contributors) :)
 
-## About Appstract
+## About StrongNguyen
 
-Appstract is a small team from The Netherlands. We create (open source) tools for webdevelopment and write about related subjects on [Medium](https://medium.com/appstract). You can [follow us on Twitter](https://twitter.com/teamappstract), [buy us a beer](https://www.paypal.me/teamappstract/10) or [support us on Patreon](https://www.patreon.com/appstract).
+StrongNguyen is a small team from The Netherlands. We create (open source) tools for webdevelopment and write about related subjects on [Medium](https://medium.com/appstract). You can [follow us on Twitter](https://twitter.com/teamappstract), [buy us a beer](https://www.paypal.me/teamappstract/10) or [support us on Patreon](https://www.patreon.com/appstract).
 
 ## License
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Appstract\Options\Test;
+namespace StrongNguyen\Options\Test;
 
-use Appstract\Options\OptionFacade;
-use Appstract\Options\OptionsServiceProvider;
+use StrongNguyen\Options\OptionFacade;
+use StrongNguyen\Options\OptionsServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 abstract class BaseTest extends TestCase

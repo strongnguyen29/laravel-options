@@ -1,6 +1,6 @@
 <?php
 
-namespace Appstract\Options;
+namespace StrongNguyen\Options;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;

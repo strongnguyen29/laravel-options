@@ -29,12 +29,12 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "Appstract\\Options\\": "src"
+            "StrongNguyen\\Options\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Appstract\\Options\\Test\\": "tests"
+            "StrongNguyen\\Options\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Appstract\\Options\\OptionsServiceProvider"
+                "StrongNguyen\\Options\\OptionsServiceProvider"
             ],
             "aliases": {
-                "Option": "Appstract\\Options\\OptionFacade"
+                "Option": "StrongNguyen\\Options\\OptionFacade"
             }
         }
     }

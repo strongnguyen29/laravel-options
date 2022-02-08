@@ -1,8 +1,8 @@
 <?php
 
-namespace Appstract\Options\Test;
+namespace StrongNguyen\Options\Test;
 
-use Appstract\Options\Option;
+use StrongNguyen\Options\Option;
 
 class HelperTest extends BaseTest
 {

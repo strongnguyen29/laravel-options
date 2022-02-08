@@ -8,7 +8,7 @@ if (! function_exists('option')) {
      *
      * @param  array|string  $key
      * @param  mixed  $default
-     * @return mixed|\Appstract\Options\Option
+     * @return mixed|\StrongNguyen\Options\Option
      */
     function option($key = null, $default = null)
     {

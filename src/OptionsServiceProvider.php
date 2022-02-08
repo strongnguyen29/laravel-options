@@ -1,6 +1,6 @@
 <?php
 
-namespace Appstract\Options;
+namespace StrongNguyen\Options;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,7 +23,7 @@ class OptionsServiceProvider extends ServiceProvider
             ], 'config');
 
             $this->commands([
-                \Appstract\Options\Console\OptionSetCommand::class,
+                \StrongNguyen\Options\Console\OptionSetCommand::class,
             ]);
         }
     }
@@ -33,6 +33,6 @@ class OptionsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('option', \Appstract\Options\Option::class);
+        $this->app->bind('option', \StrongNguyen\Options\Option::class);
     }
 }
