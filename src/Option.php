@@ -62,10 +62,6 @@ class Option extends Model
 
         if (isset($options[$key])) return $options[$key];
 
-        if ($option = self::where('key', $key)->first()) {
-            return $option->value;
-        }
-
         return $default ?? config('options.' . $key . '.value');
     }
 
@@ -85,7 +81,6 @@ class Option extends Model
         }
 
         Cache::forget(self::CACHE_KEY);
-        // @todo: return the option
     }
 
     /**
